@@ -1,0 +1,17 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "backHome": "Go back home"
+  }
+}
