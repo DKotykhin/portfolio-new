@@ -28,7 +28,7 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body className={`${nunito.variable} antialiased`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
