@@ -4,14 +4,29 @@
     "about": "About Me",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contacts": "Contacts"
   },
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Hello,",
+    "line_1": "I am Dmytro Kotykhin",
+    "line_2": "Full Stack Developer",
+    "button": "See Who I am"
   },
   "NotFound": {
     "title": "404 - Page Not Found",
     "description": "The page you are looking for does not exist.",
     "backHome": "Go back home"
+  },
+  "AboutMe": {
+    "title": "About Me",
+    "description": "I am a passionate software developer with experience in building web applications using modern technologies. I enjoy learning new programming languages and frameworks, and I am always looking for opportunities to improve my skills and contribute to exciting projects.",
+    "viewCV": "View CV",
+    "downloadCV": "Download CV",
+    "name": "Dmytro Kotykhin",
+    "position": "Full Stack Developer"
+  },
+  "Skills": {
+    "title": "Skills",
+    "description": "Here are some of the technologies and tools I am proficient in:"
   }
 }

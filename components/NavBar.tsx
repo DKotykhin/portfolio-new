@@ -1,18 +1,23 @@
-import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+'use client';
 
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
+import { useActiveSection } from '@/hooks/use-active-section';
 import { LanguageButton } from './LanguageButton';
 
-export const NavBar = async ({ locale }: { locale: string }) => {
-  const t = await getTranslations('Navigation');
+export const NavBar = ({ locale }: { locale: string }) => {
+  const t = useTranslations('Navigation');
 
   const navLinks = [
-    { name: t('home'), href: '#home' },
-    { name: t('about'), href: '#about' },
-    { name: t('skills'), href: '#skills' },
-    { name: t('projects'), href: '#projects' },
-    { name: t('contact'), href: '#contact' },
+    { name: t('home'), href: '#home', id: 'home' },
+    { name: t('about'), href: '#about-me', id: 'about-me' },
+    { name: t('skills'), href: '#skills', id: 'skills' },
+    { name: t('projects'), href: '#projects', id: 'projects' },
+    { name: t('contacts'), href: '#contacts', id: 'contacts' },
   ];
+
+  const activeSection = useActiveSection(navLinks.map(link => link.id));
 
   return (
     <div className="fixed top-0 w-full z-50 bg-background">
@@ -28,7 +33,13 @@ export const NavBar = async ({ locale }: { locale: string }) => {
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(link => (
-            <a key={link.name} href={link.href} className="text-white hover:text-orange transition-colors duration-300">
+            <a
+              key={link.name}
+              href={link.href}
+              className={`hover:text-orange transition-colors duration-300 ${
+                activeSection === link.id ? 'text-orange' : 'text-white'
+              }`}
+            >
               {link.name}
             </a>
           ))}

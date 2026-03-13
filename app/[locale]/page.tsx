@@ -1,6 +1,8 @@
 import { NavBar } from '@/components/NavBar';
 import { Home } from '@/components/Home';
 import { Footer } from '@/components/Footer';
+import { AboutMe } from '@/components/AboutMe';
+import { Skills } from '@/components/Skills';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -9,6 +11,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <div>
       <NavBar locale={locale} />
       <Home />
+      <AboutMe />
+      <Skills />
       <Footer />
     </div>
   );

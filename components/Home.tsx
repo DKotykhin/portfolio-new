@@ -1,7 +1,28 @@
-import { getTranslations } from 'next-intl/server';
+'use client';
 
-export const Home = async () => {
-  const t = await getTranslations('HomePage');
+import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+
+export const Home = () => {
+  const t = useTranslations('HomePage');
+
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 1 },
+    },
+  };
 
   return (
     <section
@@ -9,7 +30,33 @@ export const Home = async () => {
       className="min-h-screen flex items-center justify-center pt-16"
       style={{ backgroundImage: "url('/bg-2.png')" }}
     >
-      <h1 className="flex justify-center p-4">{t('title')}</h1>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col items-center sm:items-start w-full max-w-300 mx-auto px-4"
+      >
+        <motion.p
+          variants={item}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold mb-14 text-antiqueWhite"
+        >
+          {t('title')}
+        </motion.p>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-center sm:text-start mb-12 text-antiqueWhite leading-20">
+          <motion.span variants={item}>{t('line_1')}</motion.span>
+          <br />
+          <motion.span variants={item} className="text-orange">
+            {t('line_2')}
+          </motion.span>
+        </h1>
+        <motion.a
+          variants={item}
+          href="#about-me"
+          className="inline-block text-center text-orange text-xl sm:text-2xl border border-orange px-6 py-3 rounded-lg hover:text-white hover:border-white transition-colors duration-300 cursor-pointer"
+        >
+          <span>{t('button')}</span>
+        </motion.a>
+      </motion.div>
     </section>
   );
 };
