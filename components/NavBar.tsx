@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 import { useActiveSection } from '@/hooks/use-active-section';
 import { LanguageButton } from './LanguageButton';
@@ -13,7 +14,8 @@ export const NavBar = ({ locale }: { locale: string }) => {
     { name: t('home'), href: '#home', id: 'home' },
     { name: t('about'), href: '#about-me', id: 'about-me' },
     { name: t('skills'), href: '#skills', id: 'skills' },
-    { name: t('projects'), href: '#projects', id: 'projects' },
+    { name: t('experience'), href: '#experience', id: 'experience' },
+    { name: t('background'), href: '#background', id: 'background' },
     { name: t('contacts'), href: '#contacts', id: 'contacts' },
   ];
 
@@ -45,6 +47,9 @@ export const NavBar = ({ locale }: { locale: string }) => {
           ))}
           <LanguageButton locale={locale} />
         </nav>
+        <div className="md:hidden">
+          <GiHamburgerMenu size={24} className="text-white" />
+        </div>
       </div>
     </div>
   );

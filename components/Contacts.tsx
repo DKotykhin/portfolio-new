@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { SectionTitle } from './SectionTitle';
 
-export const Skills = async () => {
-  const t = await getTranslations('Skills');
+export const Contacts = async () => {
+  const t = await getTranslations('Contacts');
 
   return (
-    <section id="skills" className="min-h-screen bg-background scroll-mt-16">
+    <section id="contacts" className="min-h-screen bg-grey scroll-mt-16">
       <SectionTitle title={t('title')} />
     </section>
   );

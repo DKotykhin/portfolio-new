@@ -3,7 +3,8 @@
     "home": "Home",
     "about": "About Me",
     "skills": "Skills",
-    "projects": "Projects",
+    "experience": "Experience",
+    "background": "Background",
     "contacts": "Contacts"
   },
   "HomePage": {
@@ -19,14 +20,27 @@
   },
   "AboutMe": {
     "title": "About Me",
-    "description": "I am a passionate software developer with experience in building web applications using modern technologies. I enjoy learning new programming languages and frameworks, and I am always looking for opportunities to improve my skills and contribute to exciting projects.",
+    "description": "I am a passionate software developer with 5+ years of experience in building scalable web applications and microservice-based systems using modern technologies. I enjoy learning new programming languages and frameworks, and I am always looking for opportunities to improve my skills and contribute to exciting projects.",
     "viewCV": "View CV",
     "downloadCV": "Download CV",
     "name": "Dmytro Kotykhin",
-    "position": "Full Stack Developer"
+    "position": "Senior Full Stack Developer",
+    "location": "Warsaw, Poland"
   },
   "Skills": {
     "title": "Skills",
     "description": "Here are some of the technologies and tools I am proficient in:"
+  },
+  "Experience": {
+    "title": "Experience"
+  },
+  "Background": {
+    "title": "Background"
+  },
+  "Contacts": {
+    "title": "Contacts"
+  },
+  "Footer": {
+    "text": "Dmytro Kotykhin. All rights reserved."
   }
 }
