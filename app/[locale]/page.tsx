@@ -13,13 +13,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <div>
       <NavBar locale={locale} />
-      <Home />
-      <AboutMe />
-      <Skills />
-      <Experience />
-      <Background />
-      <Contacts />
-      <Footer />
+      <main id="page-content">
+        <Home />
+        <AboutMe />
+        <Skills />
+        <Experience />
+        <Background />
+        <Contacts />
+        <Footer />
+      </main>
     </div>
   );
 }

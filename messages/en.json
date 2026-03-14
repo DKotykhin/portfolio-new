@@ -38,7 +38,14 @@
     "title": "Background"
   },
   "Contacts": {
-    "title": "Contacts"
+    "title": "Contacts",
+    "form": {
+      "title": "Contact Me",
+      "name": "your name...",
+      "email": "your email...",
+      "message": "your message...",
+      "submit": "Send Message"
+    }
   },
   "Footer": {
     "text": "Dmytro Kotykhin. All rights reserved."

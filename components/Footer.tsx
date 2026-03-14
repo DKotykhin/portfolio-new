@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+
 import { CiLinkedin } from 'react-icons/ci';
 import { FaTelegramPlane, FaGithub } from 'react-icons/fa';
 

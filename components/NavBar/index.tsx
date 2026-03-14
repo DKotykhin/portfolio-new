@@ -1,30 +1,47 @@
 'use client';
 
+import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import { useActiveSection } from '@/hooks/use-active-section';
 import { LanguageButton } from './LanguageButton';
+import MobileNavBar from './MobileNavBar';
 
 export const NavBar = ({ locale }: { locale: string }) => {
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const t = useTranslations('Navigation');
 
-  const navLinks = [
+  useEffect(() => {
+    const content = document.getElementById('page-content');
+    if (content) {
+      content.style.filter = openMobileMenu ? 'blur(2px)' : '';
+      content.style.transition = 'filter 0.3s';
+    }
+    document.body.style.overflow = openMobileMenu ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [openMobileMenu]);
+
+  const navLinks = useMemo(() => [
     { name: t('home'), href: '#home', id: 'home' },
     { name: t('about'), href: '#about-me', id: 'about-me' },
     { name: t('skills'), href: '#skills', id: 'skills' },
     { name: t('experience'), href: '#experience', id: 'experience' },
     { name: t('background'), href: '#background', id: 'background' },
     { name: t('contacts'), href: '#contacts', id: 'contacts' },
-  ];
+  ], [t]);
 
-  const activeSection = useActiveSection(navLinks.map(link => link.id));
+  const sectionIds = useMemo(() => navLinks.map(link => link.id), [navLinks]);
+  const activeSection = useActiveSection(sectionIds);
 
   return (
     <div className="fixed top-0 w-full z-50 bg-background">
       <div className="px-4 max-w-360 mx-auto flex items-center justify-between gap-4 h-16">
-        <a href="#home">
+        <Link href="#home">
           <Image
             src="/logo-192x192.svg"
             alt="Logo"
@@ -32,10 +49,10 @@ export const NavBar = ({ locale }: { locale: string }) => {
             height={40}
             className="cursor-pointer hover:scale-125 transition-transform duration-300"
           />
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(link => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className={`hover:text-orange transition-colors duration-300 ${
@@ -43,14 +60,20 @@ export const NavBar = ({ locale }: { locale: string }) => {
               }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <LanguageButton locale={locale} />
         </nav>
-        <div className="md:hidden">
+        <button className="md:hidden" aria-label="Open menu" onClick={() => setOpenMobileMenu(!openMobileMenu)}>
           <GiHamburgerMenu size={24} className="text-white" />
-        </div>
+        </button>
       </div>
+      <MobileNavBar
+        isOpen={openMobileMenu}
+        onClose={() => setOpenMobileMenu(false)}
+        navLinks={navLinks}
+        locale={locale}
+      />
     </div>
   );
 };
