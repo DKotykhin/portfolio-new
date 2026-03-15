@@ -45,6 +45,13 @@
       "email": "your email...",
       "message": "your message...",
       "submit": "Send Message"
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "nameMax": "Name must be less than 50 characters",
+      "emailInvalid": "Invalid email address",
+      "messageMin": "Message must be at least 10 characters",
+      "messageMax": "Message must be less than 500 characters"
     }
   },
   "Footer": {

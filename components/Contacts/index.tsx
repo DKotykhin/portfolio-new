@@ -6,7 +6,7 @@ import { CiLinkedin } from 'react-icons/ci';
 import { FaTelegramPlane } from 'react-icons/fa';
 
 import { links } from '@/constants';
-import { SectionTitle } from './SectionTitle';
+import { SectionTitle } from '../SectionTitle';
 import { ContactForm } from './ContactForm';
 
 export const Contacts = async () => {
