@@ -1,3 +1,5 @@
+import { ToastContainer } from 'react-toastify';
+
 import { NavBar } from '@/components/NavBar';
 import { Home } from '@/components/Home';
 import { AboutMe } from '@/components/AboutMe';
@@ -22,6 +24,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <Contacts />
         <Footer />
       </main>
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        theme="colored"
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

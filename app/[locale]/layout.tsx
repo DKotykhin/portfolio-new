@@ -10,12 +10,32 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dmytro-kotykhin.pp.ua'),
   title: 'Dmytro Kotykhin Portfolio',
   description: 'Dmytro Kotykhin - FullStack Developer. Portfolio Website',
   keywords: ['portfolio', 'CV', 'FrontEnd Developer', 'FullStack Developer', 'WEB Developer', 'Software engineer'],
+  authors: [{ name: 'Dmytro Kotykhin', url: 'https://dmytro-kotykhin.pp.ua' }],
   icons: {
     apple: '/logo192.png',
     icon: '/logo192.png',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://dmytro-kotykhin.pp.ua',
+    title: 'Dmytro Kotykhin Portfolio',
+    description: 'Dmytro Kotykhin - FullStack Developer. Portfolio Website',
+    siteName: 'Dmytro Kotykhin Portfolio',
+    images: [{ url: '/logo192.png' }],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Dmytro Kotykhin Portfolio',
+    description: 'Dmytro Kotykhin - FullStack Developer. Portfolio Website',
+    images: ['/logo192.png'],
   },
 };
 

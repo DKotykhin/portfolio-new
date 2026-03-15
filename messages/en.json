@@ -29,7 +29,11 @@
   },
   "Skills": {
     "title": "Skills",
-    "description": "Here are some of the technologies and tools I am proficient in:"
+    "description": "Here are some of the technologies and tools I am proficient in:",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "other": "Other"
   },
   "Experience": {
     "title": "Experience"
@@ -44,7 +48,9 @@
       "name": "your name...",
       "email": "your email...",
       "message": "your message...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred while sending your message. Please try again later."
     },
     "validation": {
       "nameMin": "Name must be at least 2 characters",

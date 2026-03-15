@@ -4,8 +4,14 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { ClipLoader } from 'react-spinners';
+import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 
-import { ContactFormData, createContactResolver } from './validation';
+import { type ContactFormData, createContactResolver } from './validation';
+
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID || '';
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID || '';
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY || '';
 
 export const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -22,13 +28,13 @@ export const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     setLoading(true);
-    console.log('Form submitted:', data);
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      // throw new Error('Simulated submission error');
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
       reset();
+      toast.success(t('form.success'));
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast.error(t('form.error'));
     } finally {
       setLoading(false);
     }
