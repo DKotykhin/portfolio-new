@@ -21,8 +21,8 @@ export const Skills = async () => {
         <div className="flex flex-col gap-10">
           {categories.map(({ label, skills }) => (
             <div key={label}>
-              <p className="text-antiqueWhite mb-4 text-lg text-center lg:text-left">{label}</p>
-              <div className="flex flex-wrap gap-8 items-center justify-center lg:justify-start">
+              <p className="text-antiqueWhite mb-4 text-xl font-bold text-center lg:text-left">{label}</p>
+              <div className="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
                 {skills.map(skill => (
                   <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
                 ))}
