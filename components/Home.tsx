@@ -52,9 +52,9 @@ export const Home = () => {
         <motion.a
           variants={item}
           href="#about-me"
-          className="inline-block text-center text-orange text-xl sm:text-2xl border border-orange px-6 py-3 rounded-lg hover:text-white hover:border-white transition-colors duration-300 cursor-pointer"
+          className="inline-block text-center text-orange border border-orange px-6 py-3 rounded-lg hover:bg-orange hover:text-background transition-colors duration-300 cursor-pointer"
         >
-          <span>{t('button')}</span>
+          <span className="text-xl sm:text-2xl font-bold">{t('button')}</span>
         </motion.a>
       </motion.div>
     </section>

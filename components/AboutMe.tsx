@@ -35,10 +35,10 @@ export const AboutMe = async () => {
             </div>
             <div className="flex flex-wrap gap-2">
               {coreSkills.map((skill, index) => (
-                <div key={skill} className="flex items-center gap-2">
+                <h4 key={skill} className="flex items-center gap-2">
                   {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
                   <span className="font-semibold">{skill}</span>
-                </div>
+                </h4>
               ))}
             </div>
             <h2 className="md:text-lg lg:mt-6">{t('description')}</h2>

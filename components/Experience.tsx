@@ -13,7 +13,7 @@ export const Experience = async () => {
         <div className="flex flex-wrap gap-10">
           {jobs_experience.map((job, index) => (
             <div key={index}>
-              <h3 className="text-2xl font-semibold mb-2">
+              <p className="text-2xl font-semibold mb-2">
                 {job.company_url ? (
                   <a
                     href={job.company_url}
@@ -26,11 +26,11 @@ export const Experience = async () => {
                 ) : (
                   <span className="text-orange">{job.company}</span>
                 )}
-              </h3>
+              </p>
               <p className="text-xl text-antiqueWhite">{t(job.position)}</p>
               <p className="text-lg text-antiqueWhite">{job.period}</p>
               <div className="mt-2 md:text-lg">
-                <h4 className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('tech_stack')}:</h4>
+                <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('tech_stack')}:</p>
                 <div>
                   <div className="flex flex-wrap gap-x-2">
                     {job.tech_stack_frontend && <p className="underline">{t('frontend')}:</p>}
@@ -65,7 +65,7 @@ export const Experience = async () => {
                 </div>
               </div>
               <div className="mt-2 md:text-lg">
-                <h4 className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('results')}:</h4>
+                <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('results')}:</p>
                 <ul className="list-disc list-inside">
                   {(t.raw(`job_${index + 1}.results`) as string[]).map((result, resultIndex) => (
                     <li key={resultIndex}>{result}</li>
@@ -74,7 +74,7 @@ export const Experience = async () => {
               </div>
               {job.examples && job.examples.length > 0 && (
                 <div className="mt-2 md:text-lg">
-                  <h4 className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('examples')}:</h4>
+                  <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('examples')}:</p>
                   <ul className="list-disc list-inside">
                     {job.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>

@@ -16,7 +16,7 @@ const variants = {
 
 export const SectionTitle = ({ title }: { title: string }) => {
   return (
-    <motion.p
+    <motion.h3
       className="text-4xl font-bold text-antiqueWhite flex justify-center px-4 py-10"
       variants={variants}
       initial="hidden"
@@ -24,6 +24,6 @@ export const SectionTitle = ({ title }: { title: string }) => {
       viewport={{ once: true }}
     >
       {title}
-    </motion.p>
+    </motion.h3>
   );
 };
