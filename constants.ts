@@ -40,7 +40,7 @@ export const certificates = [
   },
 ];
 
-export const jobs_column = [
+export const jobs_experience = [
   {
     company: 'ITSUA',
     company_url: 'https://itsua.com/',
