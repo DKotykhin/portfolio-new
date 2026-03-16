@@ -36,7 +36,56 @@
     "other": "Other"
   },
   "Experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "position_1": "Full Stack Developer",
+    "position_2": "Frontend Developer",
+    "tech_stack": "Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "results": "Results",
+    "examples": "Examples",
+    "job_1": {
+      "results": [
+        "Led development of core features for a high-traffic marketplace platform SkinSwap",
+        "Designed and implemented real-time trading flows using WebSockets",
+        "Integrated 2 external payment providers, enabling new transaction channels",
+        "Implemented localized Chinese marketplace version with adapted payment flows",
+        "Contributed to microservice architecture for marketplace services",
+        "Delivered 100+ production features across trading, payments, and gamification systems",
+        "Fully implemented quiz flow for Studybooster educational project"
+      ]
+    },
+    "job_2": {
+      "results": [
+        "Delivered 2 production-ready commercial platforms",
+        "Developed 20+ features for internal CRM system used by 100+ employees",
+        "Implemented gRPC communication between microservices",
+        "Optimized frontend performance, reducing load times by 30%",
+        "Collaborated with cross-functional teams to define and implement new features",
+        "Maintained and improved existing codebase, ensuring high code quality and reliability"
+      ]
+    },
+    "job_3": {
+      "results": [
+        "Delivered 10+ production web applications",
+        "Designed GraphQL APIs using Apollo Server and integrated them with frontend applications",
+        "Integrated Stripe payment processing into e-commerce platforms, enabling secure transactions",
+        "Deployed and maintained applications on AWS infrastructure, utilizing services such as EC2, S3, and RDS"
+      ]
+    },
+    "job_4": {
+      "results": [
+        "Developed and maintained Salesforce applications using Apex, Visualforce, and Lightning components",
+        "Implemented custom Salesforce Lightning components using Aura and LWC frameworks"
+      ]
+    },
+    "job_5": {
+      "results": [
+        "Delivered 5 commercial projects using JavaScript and Tilda platform",
+        "Implemented custom JavaScript solutions to enhance functionality and user experience of Tilda-based websites"
+      ]
+    }
   },
   "Background": {
     "title": "Background",

@@ -8,7 +8,7 @@ import { SectionTitle } from './SectionTitle';
 const BulletItem = ({ text }: { text: string | JSX.Element }) => (
   <div className="flex gap-3">
     <LiaHandPointRight size={20} className="shrink-0 mt-1" />
-    <p className="text-lg mb-1">{text}</p>
+    <p className="md:text-lg mb-1">{text}</p>
   </div>
 );
 

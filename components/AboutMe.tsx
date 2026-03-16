@@ -41,7 +41,7 @@ export const AboutMe = async () => {
                 </div>
               ))}
             </div>
-            <h2 className="text-lg lg:mt-6">{t('description')}</h2>
+            <h2 className="md:text-lg lg:mt-6">{t('description')}</h2>
             <div className="flex items-center gap-8 grow">
               <Link
                 href={links.linkedin}

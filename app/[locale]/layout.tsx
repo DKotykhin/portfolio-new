@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
+import Script from 'next/script';
 
 import '../globals.css';
 
@@ -39,6 +40,8 @@ export const metadata: Metadata = {
   },
 };
 
+const TRACKING_ID: string = process.env.NEXT_PUBLIC_GOOGLE_DATA_ID || '';
+
 export default async function RootLayout({
   children,
   params,
@@ -49,6 +52,17 @@ export default async function RootLayout({
   const { locale } = await params;
   return (
     <html lang={locale} className="scroll-smooth">
+      <head>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`} strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${TRACKING_ID}');
+          `}
+        </Script>
+      </head>
       <body className={`${nunito.variable} antialiased`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

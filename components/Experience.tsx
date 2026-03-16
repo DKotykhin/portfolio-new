@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { SectionTitle } from './SectionTitle';
+import { jobs_column } from '@/constants';
 
 export const Experience = async () => {
   const t = await getTranslations('Experience');
@@ -8,9 +9,89 @@ export const Experience = async () => {
     <section id="experience" className="min-h-screen bg-grey scroll-mt-16">
       <div className="px-4 max-w-300 mx-auto pb-10">
         <SectionTitle title={t('title')} />
-        <div className="flex flex-col lg:flex-row gap-10">
-          <div className="w-full"></div>
-          <div className="w-full"></div>
+        <div className="flex flex-wrap gap-10">
+          {jobs_column.map((job, index) => (
+            <div key={index}>
+              <h3 className="text-2xl font-semibold mb-2">
+                {job.company_url ? (
+                  <a
+                    href={job.company_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange hover:underline"
+                  >
+                    {job.company}
+                  </a>
+                ) : (
+                  <span className="text-orange">{job.company}</span>
+                )}
+              </h3>
+              <p className="text-xl text-antiqueWhite">{t(job.position)}</p>
+              <p className="text-lg text-antiqueWhite">{job.period}</p>
+              <div className="mt-2 md:text-lg">
+                <h4 className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('tech_stack')}:</h4>
+                <div>
+                  <div className="flex flex-wrap gap-x-2">
+                    {job.tech_stack_frontend && <p className="underline">{t('frontend')}:</p>}
+                    {job.tech_stack_frontend &&
+                      job.tech_stack_frontend.map((tech, index) => (
+                        <div key={tech} className="flex items-center gap-2">
+                          {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
+                          <span>{tech}</span>
+                        </div>
+                      ))}
+                  </div>
+                  <div className="flex flex-wrap gap-x-2 mt-1">
+                    {job.tech_stack_backend && <p className="underline">{t('backend')}:</p>}
+                    {job.tech_stack_backend &&
+                      job.tech_stack_backend.map((tech, index) => (
+                        <div key={tech} className="flex items-center gap-2">
+                          {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
+                          <span>{tech}</span>
+                        </div>
+                      ))}
+                  </div>
+                  <div className="flex flex-wrap gap-x-2 mt-1">
+                    {job.tech_stack_database && <p className="underline">{t('database')}:</p>}
+                    {job.tech_stack_database &&
+                      job.tech_stack_database.map((tech, index) => (
+                        <div key={tech} className="flex items-center gap-2">
+                          {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
+                          <span>{tech}</span>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+              <div className="mt-2 md:text-lg">
+                <h4 className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('results')}:</h4>
+                <ul className="list-disc list-inside">
+                  {(t.raw(`job_${index + 1}.results`) as string[]).map((result, resultIndex) => (
+                    <li key={resultIndex}>{result}</li>
+                  ))}
+                </ul>
+              </div>
+              {job.examples && job.examples.length > 0 && (
+                <div className="mt-2 md:text-lg">
+                  <h4 className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('examples')}:</h4>
+                  <ul className="list-disc list-inside">
+                    {job.examples.map((example, exampleIndex) => (
+                      <li key={exampleIndex}>
+                        <a
+                          href={example}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-orange hover:underline"
+                        >
+                          {example}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
