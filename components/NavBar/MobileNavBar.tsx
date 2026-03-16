@@ -38,7 +38,7 @@ const MobileNavBar = ({
           ))}
         </ul>
         <div className="mt-6">
-          <LanguageButton locale={locale} />
+          <LanguageButton locale={locale} isMobile />
         </div>
       </nav>
     </div>

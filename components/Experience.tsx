@@ -10,7 +10,7 @@ export const Experience = async () => {
     <section id="experience" className="bg-grey scroll-mt-16">
       <div className="px-4 max-w-300 mx-auto pb-10">
         <SectionTitle title={t('title')} />
-        <div className="flex flex-wrap gap-10">
+        <div className="space-y-10">
           {jobs_experience.map((job, index) => (
             <div key={index}>
               <p className="text-2xl font-semibold mb-2">

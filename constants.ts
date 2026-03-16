@@ -109,3 +109,117 @@ export const jobs_experience = [
     tech_stack_frontend: ['JavaScript', 'HTML', 'CSS', 'Tilda'],
   },
 ];
+
+export const projects = [
+  {
+    name: 'Skinswap',
+    description: 'project_desc_1',
+    tech_stack: [
+      'Next JS',
+      'Redux',
+      'Tailwind',
+      'Socket',
+      'Astro',
+      'Node JS',
+      'Sequelize',
+      'PostgreSQL',
+      'BullMQ',
+      'Figma',
+      'Git',
+    ],
+    url: 'https://www.skinswap.com',
+  },
+  {
+    name: 'Study Booster',
+    description: 'project_desc_2',
+    tech_stack: ['Vue JS', 'Prime Vue', 'Tailwind', 'Pinia', 'Nest JS', 'Drizzle', 'MySQL'],
+    url: 'https://www.studybooster.ph',
+  },
+  {
+    name: 'YachtEase',
+    description: 'project_desc_3',
+    tech_stack: ['Next JS', 'Redux', 'Material UI', 'Figma', 'Node JS', 'Mongo DB', 'AWS', 'Stripe'],
+    url: 'https://yachtease.co',
+  },
+  {
+    name: 'Personal Portfolio',
+    description: 'project_desc_4',
+    tech_stack: ['Next JS', 'Tailwind', 'Framer Motion', 'Typescript'],
+    url: 'https://dmytro-kotykhin.pp.ua',
+    github: 'https://github.com/DKotykhin/portfolio-new',
+  },
+  {
+    name: 'Personal Projects',
+    description: 'project_desc_5',
+  },
+];
+
+export const microservices = [
+  {
+    name: 'API Gateway',
+    description: 'microservice_desc_1',
+    tech_stack: [
+      'Nest JS',
+      'TypeScript',
+      'Docker',
+      'gRPC',
+      'RabbitMQ',
+      'JWT',
+      'Swagger',
+      'Prometheus',
+      'Grafana',
+      'OpenTelemetry',
+      'Jest',
+    ],
+    github: 'https://github.com/DKotykhin/api-gateway',
+  },
+  {
+    name: 'User Service',
+    description: 'microservice_desc_2',
+    tech_stack: [
+      'Nest JS',
+      'TypeScript',
+      'Docker',
+      'gRPC',
+      'PostgreSQL',
+      'Prisma',
+      'Redis',
+      'RabbitMQ',
+      'Prometheus',
+      'Grafana',
+      'OpenTelemetry',
+      'Jest',
+    ],
+    github: 'https://github.com/DKotykhin/user-microservice',
+  },
+  {
+    name: 'Menu Service',
+    description: 'microservice_desc_3',
+    tech_stack: ['Nest JS', 'TypeScript', 'Docker', 'gRPC', 'PostgreSQL', 'Prisma', 'Jest'],
+    github: 'https://github.com/DKotykhin/menu-microservice',
+  },
+  {
+    name: 'Store Service',
+    description: 'microservice_desc_4',
+    tech_stack: ['Nest JS', 'TypeScript', 'Docker', 'gRPC', 'MySQL', 'Drizzle', 'Jest'],
+    github: 'https://github.com/DKotykhin/store-microservice',
+  },
+  {
+    name: 'Media Service',
+    description: 'microservice_desc_5',
+    tech_stack: ['Nest JS', 'TypeScript', 'Docker', 'gRPC', 'Amazon S3', 'Sharp', 'Jest'],
+    github: 'https://github.com/DKotykhin/media-microservice',
+  },
+  {
+    name: 'Notification Service',
+    description: 'microservice_desc_6',
+    tech_stack: ['Nest JS', 'TypeScript', 'Docker', 'Nodemailer', 'RabbitMQ', 'Handlebars', 'OpenTelemetry', 'Jest'],
+    github: 'https://github.com/DKotykhin/notification-microservice',
+  },
+  {
+    name: 'Docker Infrastructure',
+    description: 'microservice_desc_7',
+    tech_stack: ['Docker', 'Adminer', 'RabbitMQ', 'Loki', 'Jaeger', 'Prometheus', 'Grafana'],
+    github: 'https://github.com/DKotykhin/docker-common',
+  },
+];

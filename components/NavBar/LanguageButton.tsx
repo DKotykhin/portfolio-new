@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 
-export const LanguageButton = ({ locale }: { locale: string }) => {
+export const LanguageButton = ({ locale, isMobile }: { locale: string; isMobile?: boolean }) => {
   const [hovered, setHovered] = useState(false);
   return (
     <Link
@@ -13,7 +13,7 @@ export const LanguageButton = ({ locale }: { locale: string }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {hovered ? (locale === 'en' ? 'Ua' : 'En') : locale}
+      {hovered || isMobile ? (locale === 'en' ? 'Ua' : 'En') : locale}
     </Link>
   );
 };
