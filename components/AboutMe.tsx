@@ -21,7 +21,7 @@ export const AboutMe = async () => {
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row items-center lg:items-stretch lg:justify-between">
           <Image
             src="/photo.webp"
-            alt="Profile Picture"
+            alt="Dmytro Kotykhin - FullStack Developer"
             width={500}
             height={665}
             className="rounded-md shadow-antiqueWhite shadow-md object-cover w-full max-w-125"
@@ -30,18 +30,18 @@ export const AboutMe = async () => {
             <p className="text-4xl text-antiqueWhite font-bold">{t('name')}</p>
             <p className="text-3xl text-orange font-bold">{t('position')}</p>
             <div className="flex items-center gap-2 mt-2">
-              <FiMapPin color="#faebd7" className="text-[24px]" />
+              <FiMapPin aria-hidden="true" color="#faebd7" className="text-[24px]" />
               <span className="text-lg">{t('location')}</span>
             </div>
             <div className="flex flex-wrap gap-2">
               {coreSkills.map((skill, index) => (
-                <h4 key={skill} className="flex items-center gap-2">
+                <div key={skill} className="flex items-center gap-2">
                   {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
                   <span className="font-semibold">{skill}</span>
-                </h4>
+                </div>
               ))}
             </div>
-            <h2 className="md:text-lg lg:mt-6">{t('description')}</h2>
+            <p className="md:text-lg lg:mt-6">{t('description')}</p>
             <div className="flex items-center gap-8 grow">
               <Link
                 href={links.linkedin}
@@ -50,6 +50,7 @@ export const AboutMe = async () => {
                 className="flex items-center gap-2 group"
               >
                 <CiLinkedin
+                  aria-hidden="true"
                   color="#faebd7"
                   className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-4xl"
                 />
@@ -62,6 +63,7 @@ export const AboutMe = async () => {
                 className="flex items-center gap-2 group"
               >
                 <FaGithub
+                  aria-hidden="true"
                   color="#faebd7"
                   className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-3xl"
                 />

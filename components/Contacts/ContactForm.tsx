@@ -43,6 +43,7 @@ export const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mt-4 space-y-6">
       <div className="flex flex-col gap-1">
+        <label htmlFor="name" className="sr-only">{t('form.name')}</label>
         <input
           id="name"
           {...register('name')}
@@ -52,6 +53,7 @@ export const ContactForm = () => {
         {errors.name && <small className="text-red-500">{errors.name.message}</small>}
       </div>
       <div className="flex flex-col gap-1">
+        <label htmlFor="email" className="sr-only">{t('form.email')}</label>
         <input
           id="email"
           {...register('email')}
@@ -61,6 +63,7 @@ export const ContactForm = () => {
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
       </div>
       <div className="flex flex-col gap-1">
+        <label htmlFor="message" className="sr-only">{t('form.message')}</label>
         <textarea
           id="message"
           {...register('message')}

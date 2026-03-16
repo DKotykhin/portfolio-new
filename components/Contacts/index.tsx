@@ -32,6 +32,7 @@ export const Contacts = async () => {
           <div className="max-w-125 w-full space-y-6">
             <div className="w-fit flex items-center gap-3 group">
               <MdOutlineEmail
+                aria-hidden="true"
                 color="#faebd7"
                 className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-4xl"
               />
@@ -49,6 +50,7 @@ export const Contacts = async () => {
               className="w-fit flex items-center gap-3 group"
             >
               <FaTelegramPlane
+                aria-hidden="true"
                 color="#faebd7"
                 className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-4xl"
               />
@@ -61,6 +63,7 @@ export const Contacts = async () => {
               className="w-fit flex items-center gap-3 group"
             >
               <CiLinkedin
+                aria-hidden="true"
                 color="#faebd7"
                 className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-4xl"
               />

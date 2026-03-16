@@ -12,20 +12,23 @@ export const Footer = async () => {
   return (
     <footer className="w-full flex flex-col justify-center items-center gap-4 px-4 py-6 md:py-8 bg-background">
       <div className="w-full flex justify-center items-center gap-12">
-        <Link href={links.linkedin} target="_blank" rel="noopener noreferrer">
+        <Link href={links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <CiLinkedin
+            aria-hidden="true"
             color="#faebd7"
             className="cursor-pointer hover:scale-110 transition-transform duration-300 text-[36px] md:text-[48px]"
           />
         </Link>
-        <Link href={links.telegram} target="_blank" rel="noopener noreferrer">
+        <Link href={links.telegram} target="_blank" rel="noopener noreferrer" aria-label="Telegram">
           <FaTelegramPlane
+            aria-hidden="true"
             color="#faebd7"
             className="cursor-pointer hover:scale-110 transition-transform duration-300 text-[32px] md:text-[44px]"
           />
         </Link>
-        <Link href={links.github} target="_blank" rel="noopener noreferrer">
+        <Link href={links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <FaGithub
+            aria-hidden="true"
             color="#faebd7"
             className="cursor-pointer hover:scale-110 transition-transform duration-300 text-[32px] md:text-[44px]"
           />

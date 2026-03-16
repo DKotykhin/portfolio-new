@@ -10,35 +10,51 @@ const nunito = Nunito({
   subsets: ['latin', 'cyrillic'],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://dmytro-kotykhin.pp.ua'),
-  title: 'Dmytro Kotykhin Portfolio',
-  description: 'Dmytro Kotykhin - FullStack Developer. Portfolio Website',
-  keywords: ['portfolio', 'CV', 'FrontEnd Developer', 'FullStack Developer', 'WEB Developer', 'Software engineer'],
-  authors: [{ name: 'Dmytro Kotykhin', url: 'https://dmytro-kotykhin.pp.ua' }],
-  icons: {
-    apple: '/logo192.png',
-    icon: '/logo192.png',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    type: 'website',
-    url: 'https://dmytro-kotykhin.pp.ua',
+const metaByLocale: Record<string, { title: string; description: string }> = {
+  en: {
     title: 'Dmytro Kotykhin Portfolio',
     description: 'Dmytro Kotykhin - FullStack Developer. Portfolio Website',
-    siteName: 'Dmytro Kotykhin Portfolio',
-    images: [{ url: '/logo192.png' }],
   },
-  twitter: {
-    card: 'summary',
-    title: 'Dmytro Kotykhin Portfolio',
-    description: 'Dmytro Kotykhin - FullStack Developer. Portfolio Website',
-    images: ['/logo192.png'],
+  ua: {
+    title: 'Портфоліо Дмитра Котихіна',
+    description: 'Дмитро Котихін - Full Stack Розробник. Сайт-портфоліо',
   },
 };
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const meta = metaByLocale[locale] ?? metaByLocale.en;
+
+  return {
+    metadataBase: new URL('https://dmytro-kotykhin.pp.ua'),
+    title: meta.title,
+    description: meta.description,
+    keywords: ['portfolio', 'CV', 'FrontEnd Developer', 'FullStack Developer', 'WEB Developer', 'Software engineer'],
+    authors: [{ name: 'Dmytro Kotykhin', url: 'https://dmytro-kotykhin.pp.ua' }],
+    icons: {
+      apple: '/logo192.png',
+      icon: '/logo192.png',
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      type: 'website',
+      url: 'https://dmytro-kotykhin.pp.ua',
+      title: meta.title,
+      description: meta.description,
+      siteName: 'Dmytro Kotykhin Portfolio',
+      images: [{ url: '/logo192.png' }],
+    },
+    twitter: {
+      card: 'summary',
+      title: meta.title,
+      description: meta.description,
+      images: ['/logo192.png'],
+    },
+  };
+}
 
 const TRACKING_ID: string = process.env.NEXT_PUBLIC_GOOGLE_DATA_ID || '';
 
@@ -64,6 +80,12 @@ export default async function RootLayout({
         </Script>
       </head>
       <body className={`${nunito.variable} antialiased`}>
+        <a
+          href="#page-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-9999 focus:px-4 focus:py-2 focus:bg-background focus:text-antiqueWhite focus:rounded-md focus:outline-none"
+        >
+          Skip to content
+        </a>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
