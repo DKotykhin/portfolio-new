@@ -75,15 +75,10 @@ export const Experience = async () => {
               {job.examples && job.examples.length > 0 && (
                 <div className="mt-2 md:text-lg">
                   <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('examples')}:</p>
-                  <ul className="list-disc list-inside">
+                  <ul className="list-disc list-inside text-orange">
                     {job.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>
-                        <a
-                          href={example}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-orange hover:underline"
-                        >
+                        <a href={example} target="_blank" rel="noopener noreferrer" className="hover:underline">
                           {example}
                         </a>
                       </li>
