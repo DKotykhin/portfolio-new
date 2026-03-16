@@ -6,7 +6,13 @@ export const Experience = async () => {
 
   return (
     <section id="experience" className="min-h-screen bg-grey scroll-mt-16">
-      <SectionTitle title={t('title')} />
+      <div className="px-4 max-w-300 mx-auto pb-10">
+        <SectionTitle title={t('title')} />
+        <div className="flex flex-col lg:flex-row gap-10">
+          <div className="w-full"></div>
+          <div className="w-full"></div>
+        </div>
+      </div>
     </section>
   );
 };

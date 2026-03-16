@@ -39,7 +39,36 @@
     "title": "Experience"
   },
   "Background": {
-    "title": "Background"
+    "title": "Background",
+    "certificates": {
+      "title": "My Certificates",
+      "cert_1": "JavaScript + React. Full course",
+      "cert_2": "React + NextJS 13. TypeScript, Hooks, SSR and Grid",
+      "cert_3": "Modern TypeScript. Full course",
+      "cert_4": "Node JS - basics and application architecture",
+      "cert_5": "Node JS. Practical course. MongoDB, GraphQL, MySQL, Express",
+      "cert_6": "Nest JS - modern backend on TypeScript and Node JS",
+      "cert_7": "NestJS Microservices: Build & Deploy a Scalable Backend",
+      "cert_8": "English for IT (B2)"
+    },
+    "education": {
+      "title": "My Education",
+      "name": "National University of Radio Electronics, Kharkiv, Ukraine.",
+      "degree": "Master Degree in Electrical Engineering (1991-1996)."
+    },
+    "languages": {
+      "title": "Languages",
+      "language1": "Ukrainian (native)",
+      "language2": "Russian (native)",
+      "language3": "English (B2)",
+      "language4": "Polish (A2)"
+    },
+    "hobbies": {
+      "title": "My Hobbies",
+      "hobby1": " Learned programming ATmega8 and STM32 microcontrollers. I also have experience with Arduino and Raspberry Pi, which I used for various projects, including home automation and robotics.",
+      "hobby2": "Interested in radio electronics and have built several amateur radio projects.",
+      "hobby3": "In my free time, I enjoy riding my bike. I also have a passion for photography and love capturing moments from my travels around the world."
+    }
   },
   "Contacts": {
     "title": "Contacts",
