@@ -10,8 +10,8 @@ export const Home = () => {
     hidden: {},
     visible: {
       transition: {
-        delayChildren: 0.5,
-        staggerChildren: 1,
+        delayChildren: 0.4,
+        staggerChildren: 0.8,
       },
     },
   };
@@ -20,7 +20,7 @@ export const Home = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 1 },
+      transition: { duration: 0.8 },
     },
   };
 

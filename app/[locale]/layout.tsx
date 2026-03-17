@@ -8,6 +8,7 @@ import '../globals.css';
 const nunito = Nunito({
   variable: '--font-nunito',
   subsets: ['latin', 'cyrillic'],
+  display: 'swap',
 });
 
 const metaByLocale: Record<string, { title: string; description: string }> = {
