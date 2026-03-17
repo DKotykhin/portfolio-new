@@ -34,7 +34,7 @@ export const Contacts = async () => {
               <MdOutlineEmail
                 aria-hidden="true"
                 color="#faebd7"
-                className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-4xl"
+                className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-[32px]"
               />
               <Link
                 href={`mailto:${links.email}`}
@@ -52,7 +52,7 @@ export const Contacts = async () => {
               <FaTelegramPlane
                 aria-hidden="true"
                 color="#faebd7"
-                className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-4xl"
+                className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-[32px]"
               />
               <span className="text-lg group-hover:text-antiqueWhite transition-colors duration-300">Telegram</span>
             </Link>
