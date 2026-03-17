@@ -41,8 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     keywords: ['portfolio', 'CV', 'FrontEnd Developer', 'FullStack Developer', 'WEB Developer', 'Software engineer'],
     authors: [{ name: 'Dmytro Kotykhin', url: 'https://dmytro-kotykhin.pp.ua' }],
     icons: {
-      apple: '/logo192.png',
-      icon: '/logo192.png',
+      apple: '/logo192.avif',
+      icon: '/logo192.avif',
     },
     robots: {
       index: true,
@@ -54,13 +54,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: meta.title,
       description: meta.description,
       siteName: 'Dmytro Kotykhin Portfolio',
-      images: [{ url: '/logo192.png' }],
+      images: [{ url: '/logo192.avif' }],
     },
     twitter: {
       card: 'summary',
       title: meta.title,
       description: meta.description,
-      images: ['/logo192.png'],
+      images: ['/logo192.avif'],
     },
   };
 }

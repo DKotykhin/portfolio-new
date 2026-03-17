@@ -20,7 +20,7 @@ export const AboutMe = async () => {
         <SectionTitle title={t('title')} />
         <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row items-center lg:items-stretch lg:justify-between">
           <Image
-            src="/photo.webp"
+            src="/photo.avif"
             alt="Dmytro Kotykhin - FullStack Developer"
             width={500}
             height={665}

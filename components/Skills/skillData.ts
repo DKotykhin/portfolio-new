@@ -60,7 +60,7 @@ export const backendSkills = [
   },
   {
     name: 'gRPC',
-    icon: '/skills/grpc.png',
+    icon: '/skills/grpc.avif',
   },
 ];
 
@@ -87,7 +87,7 @@ export const databaseSkills = [
   },
   {
     name: 'Drizzle ORM',
-    icon: '/skills/drizzle.webp',
+    icon: '/skills/drizzle.avif',
   },
 ];
 
