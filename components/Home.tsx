@@ -28,7 +28,7 @@ export const Home = () => {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center pt-16"
-      style={{ backgroundImage: "url('/bg-2.png')" }}
+      style={{ backgroundImage: "url('/bg-2.avif')" }}
     >
       <motion.div
         variants={container}
