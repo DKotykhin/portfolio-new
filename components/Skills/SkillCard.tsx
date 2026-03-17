@@ -18,7 +18,7 @@ const cardClassName = [
 export const SkillCard = ({ name, icon }: SkillCardProps) => (
   <div className={cardClassName}>
     <div className="flex flex-col items-center gap-2 p-4">
-      <Image src={icon} alt={name} width={64} height={64} />
+      <Image src={icon} alt={name} width={64} height={64} sizes="64px" />
       <span className="text-antiqueWhite">{name}</span>
     </div>
   </div>

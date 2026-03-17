@@ -29,6 +29,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL('https://dmytro-kotykhin.pp.ua'),
     title: meta.title,
     description: meta.description,
+    alternates: {
+      canonical: locale === 'en' ? '/' : `/${locale}`,
+      languages: {
+        'en': '/',
+        'uk': '/ua',
+        'x-default': '/',
+      },
+    },
     keywords: ['portfolio', 'CV', 'FrontEnd Developer', 'FullStack Developer', 'WEB Developer', 'Software engineer'],
     authors: [{ name: 'Dmytro Kotykhin', url: 'https://dmytro-kotykhin.pp.ua' }],
     icons: {

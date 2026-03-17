@@ -24,6 +24,7 @@ export const AboutMe = async () => {
             alt="Dmytro Kotykhin - FullStack Developer"
             width={500}
             height={665}
+            sizes="(max-width: 768px) 100vw, 500px"
             className="rounded-md shadow-antiqueWhite shadow-md object-cover w-full max-w-125"
           />
           <div className="w-full max-w-125 flex flex-col justify-center gap-5 lg:px-12">
