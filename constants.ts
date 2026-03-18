@@ -63,6 +63,7 @@ export const jobs_experience = [
     tech_stack_backend: ['Node JS', 'Nest JS', 'Fastify', 'BullMQ', 'Docker', 'Strapi', 'Microservices'],
     tech_stack_database: ['PostgreSQL', 'MySQL', 'Drizzle', 'Sequelize', 'Redis'],
     examples: ['https://skinswap.com', 'https://www.studybooster.ph'],
+    recommendation_link: '/recommendations/Recommendation_ITSUA.pdf',
   },
   {
     company: 'dZENcode',

@@ -1,6 +1,8 @@
 import { getTranslations } from 'next-intl/server';
+import { LiaHandPointRight } from 'react-icons/lia';
 
 import { jobs_experience } from '@/constants';
+import { PdfModal } from './CVModal';
 import { SectionTitle } from './SectionTitle';
 
 export const Experience = async () => {
@@ -72,6 +74,19 @@ export const Experience = async () => {
                   ))}
                 </ul>
               </div>
+              {job.recommendation_link && (
+                <div className="mt-2 md:text-lg">
+                  <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('recommendations')}:</p>
+                  <div className="flex gap-3">
+                    <LiaHandPointRight size={20} className="shrink-0 mt-1 text-orange" />
+                    <PdfModal
+                      label={t('view_recommendation')}
+                      src={job.recommendation_link}
+                      triggerClassName="text-orange hover:underline"
+                    />
+                  </div>
+                </div>
+              )}
               {job.examples && job.examples.length > 0 && (
                 <div className="mt-2 md:text-lg">
                   <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('examples')}:</p>

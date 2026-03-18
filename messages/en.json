@@ -44,6 +44,8 @@
     "backend": "Backend",
     "database": "Database",
     "results": "Results",
+    "recommendations": "Recommendations",
+    "view_recommendation": "View Recommendation",
     "examples": "Examples",
     "job_1": {
       "results": [

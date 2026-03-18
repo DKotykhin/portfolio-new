@@ -44,6 +44,8 @@
     "backend": "Бекенд",
     "database": "Бази даних",
     "results": "Результати",
+    "recommendations": "Рекомендації",
+    "view_recommendation": "Переглянути рекомендацію",
     "examples": "Приклади",
     "job_1": {
       "results": [

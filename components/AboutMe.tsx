@@ -8,6 +8,7 @@ import { FiMapPin } from 'react-icons/fi';
 
 import { links } from '@/constants';
 import { SectionTitle } from './SectionTitle';
+import { PdfModal } from './CVModal';
 
 const coreSkills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Nest JS'];
 
@@ -72,14 +73,11 @@ export const AboutMe = async () => {
               </Link>
             </div>
             <div className="flex flex-col gap-6 mt-10">
-              <a
-                href="/cv/Dmytro_Kotykhin_CV.pdf"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="w-full px-4 py-2 border border-antiqueWhite text-antiqueWhite text-xl font-bold rounded-md hover:bg-antiqueWhite hover:text-background transition-colors duration-300 text-center"
-              >
-                {t('viewCV')}
-              </a>
+              <PdfModal
+                label={t('viewCV')}
+                src="/cv/Dmytro_Kotykhin_CV.pdf"
+                triggerClassName="w-full px-4 py-2 border border-antiqueWhite text-antiqueWhite text-xl font-bold rounded-md hover:bg-antiqueWhite hover:text-background transition-colors duration-300 text-center"
+              />
               <a
                 href="/cv/Dmytro_Kotykhin_CV.pdf"
                 download
