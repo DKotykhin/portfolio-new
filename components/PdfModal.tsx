@@ -11,9 +11,17 @@ interface PdfModalProps {
 export const PdfModal = ({ label, src, triggerClassName }: PdfModalProps) => {
   const [open, setOpen] = useState(false);
 
+  const handleClick = () => {
+    if (window.innerWidth < 768) {
+      window.open(src, '_blank');
+    } else {
+      setOpen(true);
+    }
+  };
+
   return (
     <>
-      <button onClick={() => setOpen(true)} className={triggerClassName}>
+      <button onClick={handleClick} className={triggerClassName}>
         {label}
       </button>
 
