@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { LiaHandPointRight } from 'react-icons/lia';
 
 import { jobs_experience } from '@/constants';
-import { PdfModal } from './CVModal';
+import { PdfModal } from './PdfModal';
 import { SectionTitle } from './SectionTitle';
 
 export const Experience = async () => {

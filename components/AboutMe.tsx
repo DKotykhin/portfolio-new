@@ -8,7 +8,7 @@ import { FiMapPin } from 'react-icons/fi';
 
 import { links } from '@/constants';
 import { SectionTitle } from './SectionTitle';
-import { PdfModal } from './CVModal';
+import { PdfModal } from './PdfModal';
 
 const coreSkills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Nest JS'];
 
