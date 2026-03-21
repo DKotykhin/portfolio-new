@@ -1,12 +1,14 @@
 # Dmytro Kotykhin — Portfolio
 
 ![Next.js](https://img.shields.io/badge/NextJS-16-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)
-![next-intl](https://img.shields.io/badge/next--intl-i18n-orange)
+![next-intl](https://img.shields.io/badge/next--intl-i18n-orange?logo=i18next&logoColor=white)
 ![EmailJS](https://img.shields.io/badge/EmailJS-4-orange?logo=maildotru&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-7-EC5990?logo=reacthookform&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-4-408AFF?logo=zod&logoColor=white)
 
 Personal portfolio website built with Next.js 16, featuring a multi-language UI, animated sections, and a working contact form.
 
@@ -23,10 +25,11 @@ Personal portfolio website built with Next.js 16, featuring a multi-language UI,
 
 ## Sections
 
-- **Hero** — intro with animated background
+- **Hero** — intro with animated content
 - **About Me** — personal summary
 - **Skills** — tech stack overview
 - **Experience** — work history
+- **Background** - education and hobbies
 - **Contacts** — contact form + social links
 
 ## Getting Started
