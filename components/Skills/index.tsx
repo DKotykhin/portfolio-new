@@ -16,7 +16,7 @@ export const Skills = async () => {
 
   return (
     <section id="skills" className="bg-background scroll-mt-16">
-      <div className="px-4 md:px-8 max-w-300 mx-auto pb-10">
+      <div className="px-4 md:px-8 max-w-308 mx-auto pb-10">
         <SectionTitle title={t('title')} />
         <div className="flex flex-col gap-10">
           {categories.map(({ label, skills }) => (

@@ -14,7 +14,7 @@ export const Contacts = async () => {
 
   return (
     <section id="contacts" className="bg-grey scroll-mt-16">
-      <div className="px-4 md:px-8 max-w-300 mx-auto pb-10">
+      <div className="px-4 md:px-8 max-w-308 mx-auto pb-10">
         <SectionTitle title={t('title')} />
         <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10">
           <div
