@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { ClipLoader } from 'react-spinners';
@@ -14,7 +14,7 @@ const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID || '';
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY || '';
 
 export const ContactForm = () => {
-  const [loading, setLoading] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const t = useTranslations('Contacts');
 
   const {
@@ -26,24 +26,25 @@ export const ContactForm = () => {
     resolver: createContactResolver(t),
   });
 
-  const onSubmit = async (data: ContactFormData) => {
-    setLoading(true);
-    try {
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
-      reset();
-      toast.success(t('form.success'));
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast.error(t('form.error'));
-    } finally {
-      setLoading(false);
-    }
+  const onSubmit = (data: ContactFormData) => {
+    startTransition(async () => {
+      try {
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
+        reset();
+        toast.success(t('form.success'));
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        toast.error(t('form.error'));
+      }
+    });
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mt-4 space-y-6">
       <div className="flex flex-col gap-1">
-        <label htmlFor="name" className="sr-only">{t('form.name')}</label>
+        <label htmlFor="name" className="sr-only">
+          {t('form.name')}
+        </label>
         <input
           id="name"
           {...register('name')}
@@ -53,17 +54,21 @@ export const ContactForm = () => {
         {errors.name && <small className="text-red-500">{errors.name.message}</small>}
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="email" className="sr-only">{t('form.email')}</label>
+        <label htmlFor="email" className="sr-only">
+          {t('form.email')}
+        </label>
         <input
           id="email"
           {...register('email')}
           className="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
           placeholder={t('form.email')}
         />
-        {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+        {errors.email && <small className="text-red-500">{errors.email.message}</small>}
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="message" className="sr-only">{t('form.message')}</label>
+        <label htmlFor="message" className="sr-only">
+          {t('form.message')}
+        </label>
         <textarea
           id="message"
           {...register('message')}
@@ -71,14 +76,14 @@ export const ContactForm = () => {
           placeholder={t('form.message')}
           rows={5}
         />
-        {errors.message && <p className="text-red-500">{errors.message.message}</p>}
+        {errors.message && <small className="text-red-500">{errors.message.message}</small>}
       </div>
       <button
         type="submit"
-        className={`w-full px-4 py-2 bg-grey rounded-sm transition-colors duration-300 text-lg font-bold text-antiqueWhite ${loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-orange hover:text-grey'}`}
-        disabled={loading}
+        className={`w-full px-4 py-2 bg-grey rounded-sm transition-colors duration-300 text-lg font-bold text-antiqueWhite ${isPending ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-orange hover:text-grey'}`}
+        disabled={isPending}
       >
-        {loading ? <ClipLoader color="#faebd7" size={22} /> : t('form.submit')}
+        {isPending ? <ClipLoader color="#faebd7" size={22} /> : t('form.submit')}
       </button>
     </form>
   );
