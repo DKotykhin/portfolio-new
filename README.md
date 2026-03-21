@@ -7,7 +7,6 @@
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)
 ![next-intl](https://img.shields.io/badge/next--intl-i18n-orange?logo=i18next&logoColor=white)
 ![EmailJS](https://img.shields.io/badge/EmailJS-4-orange?logo=maildotru&logoColor=white)
-![React Hook Form](https://img.shields.io/badge/React_Hook_Form-7-EC5990?logo=reacthookform&logoColor=white)
 ![Zod](https://img.shields.io/badge/Zod-4-408AFF?logo=zod&logoColor=white)
 
 Personal portfolio website built with Next.js 16, featuring a multi-language UI, animated sections, and a working contact form.
