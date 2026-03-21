@@ -1,5 +1,9 @@
 export const frontendSkills = [
   {
+    name: 'JavaScript',
+    icon: '/skills/javascript.svg',
+  },
+  {
     name: 'Next.js',
     icon: '/skills/next-js.svg',
   },
@@ -26,10 +30,6 @@ export const frontendSkills = [
   {
     name: 'SCSS',
     icon: '/skills/scss.svg',
-  },
-  {
-    name: 'JavaScript',
-    icon: '/skills/javascript.svg',
   },
 ];
 

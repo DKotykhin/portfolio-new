@@ -26,21 +26,24 @@ export const NavBar = ({ locale }: { locale: string }) => {
     };
   }, [openMobileMenu]);
 
-  const navLinks = useMemo(() => [
-    { name: t('home'), href: '#home', id: 'home' },
-    { name: t('about'), href: '#about-me', id: 'about-me' },
-    { name: t('skills'), href: '#skills', id: 'skills' },
-    { name: t('experience'), href: '#experience', id: 'experience' },
-    { name: t('background'), href: '#background', id: 'background' },
-    { name: t('contacts'), href: '#contacts', id: 'contacts' },
-  ], [t]);
+  const navLinks = useMemo(
+    () => [
+      { name: t('home'), href: '#home', id: 'home' },
+      { name: t('about'), href: '#about-me', id: 'about-me' },
+      { name: t('skills'), href: '#skills', id: 'skills' },
+      { name: t('experience'), href: '#experience', id: 'experience' },
+      { name: t('background'), href: '#background', id: 'background' },
+      { name: t('contacts'), href: '#contacts', id: 'contacts' },
+    ],
+    [t]
+  );
 
   const sectionIds = useMemo(() => navLinks.map(link => link.id), [navLinks]);
   const activeSection = useActiveSection(sectionIds);
 
   return (
     <div className="fixed top-0 w-full z-50 bg-background">
-      <div className="px-4 max-w-360 mx-auto flex items-center justify-between gap-4 h-16">
+      <div className="px-4 md:px-8 max-w-360 mx-auto flex items-center justify-between gap-4 h-16">
         <Link href="#home">
           <Image
             src="/logo-192x192.svg"

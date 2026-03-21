@@ -14,7 +14,7 @@ export const Contacts = async () => {
 
   return (
     <section id="contacts" className="bg-grey scroll-mt-16">
-      <div className="px-4 max-w-300 mx-auto pb-10">
+      <div className="px-4 md:px-8 max-w-300 mx-auto pb-10">
         <SectionTitle title={t('title')} />
         <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-10">
           <div
@@ -30,19 +30,16 @@ export const Contacts = async () => {
             </div>
           </div>
           <div className="max-w-125 w-full space-y-6">
-            <div className="w-fit flex items-center gap-3 group">
+            <Link href={`mailto:${links.email}`} className="w-fit flex items-center gap-3 group">
               <MdOutlineEmail
                 aria-hidden="true"
                 color="#faebd7"
                 className="cursor-pointer group-hover:scale-110 transition-transform duration-300 text-[32px]"
               />
-              <Link
-                href={`mailto:${links.email}`}
-                className="text-lg group-hover:text-antiqueWhite transition-colors duration-300"
-              >
+              <span className="text-lg group-hover:text-antiqueWhite transition-colors duration-300">
                 {links.email}
-              </Link>
-            </div>
+              </span>
+            </Link>
             <Link
               href={links.telegram}
               target="_blank"

@@ -20,7 +20,7 @@ export const Background = async () => {
 
   return (
     <section id="background" className="bg-background scroll-mt-16">
-      <div className="px-4 max-w-300 mx-auto pb-10">
+      <div className="px-4 md:px-8 max-w-300 mx-auto pb-10">
         <SectionTitle title={t('title')} />
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="w-full">

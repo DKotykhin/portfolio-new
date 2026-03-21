@@ -34,7 +34,7 @@ export const Home = () => {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="flex flex-col items-center sm:items-start w-full max-w-300 mx-auto px-4"
+        className="flex flex-col items-center sm:items-start w-full max-w-300 mx-auto px-4 md:px-8"
       >
         <motion.p
           variants={item}

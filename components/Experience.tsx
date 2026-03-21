@@ -10,7 +10,7 @@ export const Experience = async () => {
 
   return (
     <section id="experience" className="bg-grey scroll-mt-16">
-      <div className="px-4 max-w-300 mx-auto pb-10">
+      <div className="px-4 md:px-8 max-w-300 mx-auto pb-10">
         <SectionTitle title={t('title')} />
         <div className="space-y-10">
           {jobs_experience.map((job, index) => (
