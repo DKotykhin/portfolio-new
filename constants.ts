@@ -92,8 +92,8 @@ export const jobs_experience = [
     position: 'position_1',
     period: '07.2022 ‐ 01.2024',
     tech_stack_frontend: ['Next JS', 'Redux', 'SCSS', 'Typescript', 'Material UI', 'Figma', 'Apollo GraphQL'],
-    tech_stack_backend: ['Node JS', 'Express', 'Apollo Server', 'Mongo DB', 'JWT', 'Hygraph', 'AWS', 'Stripe'],
-    tech_stack_database: ['PostgreSQL', 'TypeORM', 'Redis'],
+    tech_stack_backend: ['Node JS', 'Express', 'Apollo Server', 'JWT', 'Hygraph', 'AWS', 'Stripe'],
+    tech_stack_database: ['PostgreSQL', 'Mongo DB', 'Redis'],
     examples: ['https://yachtease.com'],
   },
   {
