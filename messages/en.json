@@ -32,7 +32,7 @@
     "description": "Here are some of the technologies and tools I am proficient in:",
     "frontend": "Frontend",
     "backend": "Backend",
-    "database": "Database",
+    "database": "Databases",
     "other": "Other"
   },
   "Experience": {
@@ -42,7 +42,7 @@
     "tech_stack": "Tech Stack",
     "frontend": "Frontend",
     "backend": "Backend",
-    "database": "Database",
+    "database": "Databases",
     "results": "Results",
     "recommendations": "Recommendations",
     "view_recommendation": "View Recommendation",

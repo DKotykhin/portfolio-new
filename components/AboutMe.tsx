@@ -28,7 +28,7 @@ export const AboutMe = async () => {
             sizes="(max-width: 768px) 100vw, 500px"
             className="rounded-md shadow-antiqueWhite shadow-md object-cover w-full max-w-125"
           />
-          <div className="w-full max-w-125 flex flex-col justify-center gap-5 lg:px-12">
+          <div className="w-full max-w-125 flex flex-col justify-center gap-5 lg:px-5">
             <p className="text-4xl text-antiqueWhite font-bold">{t('name')}</p>
             <p className="text-3xl text-orange font-bold">{t('position')}</p>
             <div className="flex items-center gap-2 mt-2">
@@ -72,7 +72,7 @@ export const AboutMe = async () => {
                 <span className="text-lg group-hover:text-antiqueWhite transition-colors duration-300">GitHub</span>
               </Link>
             </div>
-            <div className="flex flex-col gap-6 mt-10">
+            <div className="flex flex-col gap-6 mt-8">
               <PdfModal
                 label={t('viewCV')}
                 src="/cv/Dmytro_Kotykhin_CV.pdf"
