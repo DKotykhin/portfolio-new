@@ -27,7 +27,6 @@ export const Skills = async () => {
                   <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
                 ))}
               </div>
-              {/* <div className="border-t border-lightGrey mt-10" /> */}
             </div>
           ))}
         </div>

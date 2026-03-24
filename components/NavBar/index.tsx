@@ -66,7 +66,7 @@ export const NavBar = ({ locale }: { locale: string }) => {
               {link.name}
             </Link>
           ))}
-          <LanguageButton locale={locale} />
+          <LanguageButton locale={locale} activeSection={activeSection} />
         </nav>
         <button className="md:hidden" aria-label="Open menu" onClick={() => setOpenMobileMenu(!openMobileMenu)}>
           <GiHamburgerMenu size={24} className="text-white" />
@@ -77,6 +77,7 @@ export const NavBar = ({ locale }: { locale: string }) => {
         onClose={() => setOpenMobileMenu(false)}
         navLinks={navLinks}
         locale={locale}
+        activeSection={activeSection}
       />
     </div>
   );

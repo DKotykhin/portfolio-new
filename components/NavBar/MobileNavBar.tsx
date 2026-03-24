@@ -7,11 +7,13 @@ const MobileNavBar = ({
   onClose,
   navLinks,
   locale,
+  activeSection,
 }: {
   isOpen: boolean;
   onClose: () => void;
   navLinks: { name: string; href: string; id: string }[];
   locale: string;
+  activeSection?: string | null;
 }) => {
   return (
     <div className="md:hidden">
@@ -40,7 +42,7 @@ const MobileNavBar = ({
           ))}
         </ul>
         <div className="mt-6">
-          <LanguageButton locale={locale} isMobile />
+          <LanguageButton locale={locale} isMobile activeSection={activeSection} />
         </div>
       </nav>
     </div>
