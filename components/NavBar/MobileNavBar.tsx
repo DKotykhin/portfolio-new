@@ -34,7 +34,17 @@ const MobileNavBar = ({
         <ul className="flex flex-col gap-4">
           {navLinks.map((link, index) => (
             <li key={link.id} className="w-full text-center">
-              <Link href={link.href} onClick={onClose} className="text-white text-xl">
+              <Link
+                href={link.href}
+                onClick={() => {
+                  document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+                  onClose();
+                }}
+                aria-current={activeSection === link.id ? 'true' : undefined}
+                className={`text-xl transition-colors duration-300 ${
+                  activeSection === link.id ? 'text-orange' : 'text-white'
+                }`}
+              >
                 {link.name}
               </Link>
               {index < navLinks.length - 1 && <div className="border-t border-gray w-full mt-3" />}

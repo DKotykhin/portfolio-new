@@ -58,6 +58,7 @@ export const NavBar = ({ locale }: { locale: string }) => {
             <Link
               key={link.name}
               href={link.href}
+              onClick={() => document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' })}
               aria-current={activeSection === link.id ? 'true' : undefined}
               className={`hover:text-orange transition-colors duration-300 ${
                 activeSection === link.id ? 'text-orange' : 'text-white'
