@@ -42,13 +42,5 @@ export function useActiveSection(sectionIds: string[]) {
     };
   }, [sectionIds]);
 
-  useEffect(() => {
-    if (activeSection === null) {
-      history.replaceState(null, '', window.location.pathname);
-    } else {
-      history.replaceState(null, '', `#${activeSection}`);
-    }
-  }, [activeSection]);
-
   return activeSection;
 }
