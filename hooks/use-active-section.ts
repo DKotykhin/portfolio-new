@@ -7,6 +7,8 @@ export function useActiveSection(sectionIds: string[]) {
   const intersecting = useRef<Set<string>>(new Set());
 
   useEffect(() => {
+    history.scrollRestoration = 'manual';
+
     const pickTopmost = () => {
       // Return the first sectionId (in DOM order) that is currently intersecting
       const active = sectionIds.find(id => intersecting.current.has(id)) ?? null;
