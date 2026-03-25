@@ -17,7 +17,7 @@ const variants = {
 export const SectionTitle = ({ title }: { title: string }) => {
   return (
     <motion.h2
-      className="text-4xl font-bold text-antiqueWhite flex justify-center px-4 py-10"
+      className="text-antiqueWhite flex justify-center px-4 py-10 text-4xl font-bold"
       variants={variants}
       initial="hidden"
       whileInView="visible"

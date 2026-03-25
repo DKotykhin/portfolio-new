@@ -48,7 +48,7 @@ export const ContactForm = () => {
         <input
           id="name"
           {...register('name')}
-          className="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
+          className="bg-grey text-antiqueWhite rounded-sm px-4 py-2"
           placeholder={t('form.name')}
         />
         {errors.name && <small className="text-red-500">{errors.name.message}</small>}
@@ -60,7 +60,7 @@ export const ContactForm = () => {
         <input
           id="email"
           {...register('email')}
-          className="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
+          className="bg-grey text-antiqueWhite rounded-sm px-4 py-2"
           placeholder={t('form.email')}
         />
         {errors.email && <small className="text-red-500">{errors.email.message}</small>}
@@ -72,7 +72,7 @@ export const ContactForm = () => {
         <textarea
           id="message"
           {...register('message')}
-          className="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
+          className="bg-grey text-antiqueWhite rounded-sm px-4 py-2"
           placeholder={t('form.message')}
           rows={5}
         />
@@ -80,7 +80,7 @@ export const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className={`w-full px-4 py-2 bg-grey rounded-sm transition-colors duration-300 text-lg font-bold text-antiqueWhite ${isPending ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-orange hover:text-grey'}`}
+        className={`bg-grey text-antiqueWhite w-full rounded-sm px-4 py-2 text-lg font-bold transition-colors duration-300 ${isPending ? 'cursor-not-allowed opacity-50' : 'hover:bg-orange hover:text-grey cursor-pointer'}`}
         disabled={isPending}
       >
         {isPending ? <ClipLoader color="#faebd7" size={22} /> : t('form.submit')}

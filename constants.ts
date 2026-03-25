@@ -5,6 +5,8 @@ export const links = {
   email: 'kotykhin_d@ukr.net',
 };
 
+export const coreSkills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Nest JS'];
+
 export const certificates = [
   {
     text: 'cert_1',

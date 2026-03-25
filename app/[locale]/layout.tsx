@@ -91,7 +91,7 @@ export default async function RootLayout({
       <body className={`${nunito.variable} antialiased`}>
         <a
           href="#page-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-9999 focus:px-4 focus:py-2 focus:bg-background focus:text-antiqueWhite focus:rounded-md focus:outline-none"
+          className="focus:bg-background focus:text-antiqueWhite sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-9999 focus:rounded-md focus:px-4 focus:py-2 focus:outline-none"
         >
           Skip to content
         </a>

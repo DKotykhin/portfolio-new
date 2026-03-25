@@ -19,14 +19,14 @@ const MobileNavBar = ({
     <div className="md:hidden">
       <div
         aria-hidden="true"
-        className={`fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 ${
-          isOpen ? 'opacity-70' : 'opacity-0 pointer-events-none'
+        className={`bg-opacity-50 fixed inset-0 z-40 bg-black transition-opacity duration-300 ${
+          isOpen ? 'opacity-70' : 'pointer-events-none opacity-0'
         }`}
         onClick={onClose}
       />
       <nav
         aria-hidden={!isOpen}
-        className={`${isOpen ? 'translate-y-0' : '-translate-y-full'} absolute top-0 left-0 w-full bg-background p-4 flex flex-col z-50 items-center transition-transform duration-300`}
+        className={`${isOpen ? 'translate-y-0' : '-translate-y-full'} bg-background absolute top-0 left-0 z-50 flex w-full flex-col items-center p-4 transition-transform duration-300`}
       >
         <button onClick={onClose} aria-label="Close menu" className="self-end">
           <IoClose size={24} className="text-white" />
@@ -47,7 +47,7 @@ const MobileNavBar = ({
               >
                 {link.name}
               </Link>
-              {index < navLinks.length - 1 && <div className="border-t border-gray w-full mt-3" />}
+              {index < navLinks.length - 1 && <div className="border-gray mt-3 w-full border-t" />}
             </li>
           ))}
         </ul>

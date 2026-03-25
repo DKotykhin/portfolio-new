@@ -30,13 +30,13 @@ export const PdfModal = ({ label, src, triggerClassName }: PdfModalProps) => {
           <div className="flex justify-end p-3">
             <button
               onClick={() => setOpen(false)}
-              className="text-antiqueWhite text-2xl font-bold px-4 py-1 hover:text-orange transition-colors duration-300"
+              className="text-antiqueWhite hover:text-orange px-4 py-1 text-2xl font-bold transition-colors duration-300"
               aria-label="Close PDF viewer"
             >
               ✕
             </button>
           </div>
-          <iframe src={src} className="flex-1 w-full" title={label} />
+          <iframe src={src} className="w-full flex-1" title={label} />
         </div>
       )}
     </>

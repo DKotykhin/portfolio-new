@@ -16,13 +16,13 @@ export const Skills = async () => {
 
   return (
     <section id="skills" className="bg-background scroll-mt-16">
-      <div className="px-4 md:px-8 max-w-308 mx-auto pb-10">
+      <div className="mx-auto max-w-308 px-4 pb-10 md:px-8">
         <SectionTitle title={t('title')} />
         <div className="flex flex-col gap-10">
           {categories.map(({ label, skills }) => (
             <div key={label}>
-              <p className="text-antiqueWhite mb-4 text-xl font-bold text-center lg:text-left">{label}</p>
-              <div className="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
+              <p className="text-antiqueWhite mb-4 text-center text-xl font-bold lg:text-left">{label}</p>
+              <div className="flex flex-wrap items-center justify-center gap-5 lg:justify-start">
                 {skills.map(skill => (
                   <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
                 ))}

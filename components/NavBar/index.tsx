@@ -42,18 +42,18 @@ export const NavBar = ({ locale }: { locale: string }) => {
   const activeSection = useActiveSection(sectionIds);
 
   return (
-    <div className="fixed top-0 w-full z-50 bg-background">
-      <div className="px-4 md:px-8 max-w-360 mx-auto flex items-center justify-between gap-4 h-16">
+    <div className="bg-background fixed top-0 z-50 w-full">
+      <div className="mx-auto flex h-16 max-w-360 items-center justify-between gap-4 px-4 md:px-8">
         <Link href="#home">
           <Image
             src="/logo-192x192.svg"
             alt="Logo"
             width={40}
             height={40}
-            className="cursor-pointer hover:scale-125 transition-transform duration-300"
+            className="cursor-pointer transition-transform duration-300 hover:scale-125"
           />
         </Link>
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map(link => (
             <Link
               key={link.name}

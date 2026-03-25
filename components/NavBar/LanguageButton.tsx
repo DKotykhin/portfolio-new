@@ -22,7 +22,7 @@ export const LanguageButton = ({
       href={href}
       locale={locale === 'en' ? 'ua' : 'en'}
       aria-label={locale === 'en' ? 'Switch to Ukrainian' : 'Switch to English'}
-      className="capitalize flex justify-center items-center py-1 min-w-12 rounded-md text-md border border-lightGray hover:brightness-125 transition-discrete duration-300"
+      className="text-md border-lightGray flex min-w-12 items-center justify-center rounded-md border py-1 capitalize transition-discrete duration-300 hover:brightness-125"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

@@ -10,5 +10,6 @@
   "htmlWhitespaceSensitivity": "css",
   "bracketSameLine": false,
   "proseWrap": "preserve",
-  "useTabs": false
+  "useTabs": false,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

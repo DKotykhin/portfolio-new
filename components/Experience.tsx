@@ -10,12 +10,12 @@ export const Experience = async () => {
 
   return (
     <section id="experience" className="bg-grey scroll-mt-16">
-      <div className="px-4 md:px-8 max-w-308 mx-auto pb-10">
+      <div className="mx-auto max-w-308 px-4 pb-10 md:px-8">
         <SectionTitle title={t('title')} />
         <div className="space-y-10">
           {jobs_experience.map((job, index) => (
             <div key={index}>
-              <p className="text-2xl font-semibold mb-2">
+              <p className="mb-2 text-2xl font-semibold">
                 {job.company_url ? (
                   <a
                     href={job.company_url}
@@ -29,37 +29,37 @@ export const Experience = async () => {
                   <span className="text-orange">{job.company}</span>
                 )}
               </p>
-              <p className="text-xl text-antiqueWhite">{t(job.position)}</p>
-              <p className="text-lg text-antiqueWhite">{job.period}</p>
+              <p className="text-antiqueWhite text-xl">{t(job.position)}</p>
+              <p className="text-antiqueWhite text-lg">{job.period}</p>
               <div className="mt-2 md:text-lg">
-                <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('tech_stack')}:</p>
+                <p className="text-antiqueWhite mb-1 font-medium whitespace-nowrap">{t('tech_stack')}:</p>
                 <div>
                   <div className="flex flex-wrap gap-x-2">
                     {job.tech_stack_frontend && <p className="underline">{t('frontend')}:</p>}
                     {job.tech_stack_frontend &&
                       job.tech_stack_frontend.map((tech, index) => (
                         <div key={tech} className="flex items-center gap-2">
-                          {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
+                          {index !== 0 && <span className="bg-lightGray h-1 w-1 rounded-full" />}
                           <span>{tech}</span>
                         </div>
                       ))}
                   </div>
-                  <div className="flex flex-wrap gap-x-2 mt-1">
+                  <div className="mt-1 flex flex-wrap gap-x-2">
                     {job.tech_stack_backend && <p className="underline">{t('backend')}:</p>}
                     {job.tech_stack_backend &&
                       job.tech_stack_backend.map((tech, index) => (
                         <div key={tech} className="flex items-center gap-2">
-                          {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
+                          {index !== 0 && <span className="bg-lightGray h-1 w-1 rounded-full" />}
                           <span>{tech}</span>
                         </div>
                       ))}
                   </div>
-                  <div className="flex flex-wrap gap-x-2 mt-1">
+                  <div className="mt-1 flex flex-wrap gap-x-2">
                     {job.tech_stack_database && <p className="underline">{t('database')}:</p>}
                     {job.tech_stack_database &&
                       job.tech_stack_database.map((tech, index) => (
                         <div key={tech} className="flex items-center gap-2">
-                          {index !== 0 && <span className="w-1 h-1 rounded-full bg-lightGray" />}
+                          {index !== 0 && <span className="bg-lightGray h-1 w-1 rounded-full" />}
                           <span>{tech}</span>
                         </div>
                       ))}
@@ -67,8 +67,8 @@ export const Experience = async () => {
                 </div>
               </div>
               <div className="mt-2 md:text-lg">
-                <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('results')}:</p>
-                <ul className="list-disc list-inside">
+                <p className="text-antiqueWhite mb-1 font-medium whitespace-nowrap">{t('results')}:</p>
+                <ul className="list-inside list-disc">
                   {(t.raw(`job_${index + 1}.results`) as string[]).map((result, resultIndex) => (
                     <li key={resultIndex}>{result}</li>
                   ))}
@@ -76,9 +76,9 @@ export const Experience = async () => {
               </div>
               {job.recommendation_link && (
                 <div className="mt-2 md:text-lg">
-                  <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('recommendations')}:</p>
+                  <p className="text-antiqueWhite mb-1 font-medium whitespace-nowrap">{t('recommendations')}:</p>
                   <div className="flex gap-3">
-                    <LiaHandPointRight size={20} className="shrink-0 mt-1 text-orange" />
+                    <LiaHandPointRight size={20} className="text-orange mt-1 shrink-0" />
                     <PdfModal
                       label={t('view_recommendation')}
                       src={job.recommendation_link}
@@ -89,8 +89,8 @@ export const Experience = async () => {
               )}
               {job.examples && job.examples.length > 0 && (
                 <div className="mt-2 md:text-lg">
-                  <p className="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{t('examples')}:</p>
-                  <ul className="list-disc list-inside text-orange">
+                  <p className="text-antiqueWhite mb-1 font-medium whitespace-nowrap">{t('examples')}:</p>
+                  <ul className="text-orange list-inside list-disc">
                     {job.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>
                         <a href={example} target="_blank" rel="noopener noreferrer" className="hover:underline">

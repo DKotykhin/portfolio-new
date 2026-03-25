@@ -27,21 +27,21 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-16 bg-[url('/bg-mobile.avif')] md:bg-[url('/bg-full.avif')]"
+      className="flex min-h-screen items-center justify-center bg-[url('/bg-mobile.avif')] pt-16 md:bg-[url('/bg-full.avif')]"
     >
       <motion.div
         variants={container}
         initial="hidden"
         animate="visible"
-        className="flex flex-col items-center sm:items-start w-full max-w-308 mx-auto px-4 md:px-8"
+        className="mx-auto flex w-full max-w-308 flex-col items-center px-4 sm:items-start md:px-8"
       >
         <motion.p
           variants={item}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold mb-14 text-antiqueWhite"
+          className="text-antiqueWhite mb-14 text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-7xl"
         >
           {t('title')}
         </motion.p>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-center sm:text-start mb-12 text-antiqueWhite leading-20">
+        <h1 className="text-antiqueWhite mb-12 text-center text-3xl leading-20 font-semibold sm:text-start sm:text-4xl md:text-5xl lg:text-7xl">
           <motion.span variants={item}>{t('line_1')}</motion.span>
           <br />
           <motion.span variants={item} className="text-orange">
@@ -51,9 +51,9 @@ export const Home = () => {
         <motion.a
           variants={item}
           href="#about-me"
-          className="inline-block text-center text-orange border border-orange px-6 py-3 rounded-lg hover:bg-orange hover:text-background transition-colors duration-300 cursor-pointer"
+          className="text-orange border-orange hover:bg-orange hover:text-background inline-block cursor-pointer rounded-lg border px-6 py-3 text-center transition-colors duration-300"
         >
-          <span className="text-xl sm:text-2xl font-bold">{t('button')}</span>
+          <span className="text-xl font-bold sm:text-2xl">{t('button')}</span>
         </motion.a>
       </motion.div>
     </section>

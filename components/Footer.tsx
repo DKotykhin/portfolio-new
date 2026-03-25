@@ -10,30 +10,30 @@ export const Footer = async () => {
   const t = await getTranslations('Footer');
 
   return (
-    <footer className="w-full flex flex-col justify-center items-center gap-4 px-4 py-6 md:py-8 bg-background">
-      <div className="w-full flex justify-center items-center gap-12">
+    <footer className="bg-background flex w-full flex-col items-center justify-center gap-4 px-4 py-6 md:py-8">
+      <nav aria-label="Social links" className="flex w-full items-center justify-center gap-12">
         <Link href={links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <CiLinkedin
             aria-hidden="true"
             color="#faebd7"
-            className="cursor-pointer hover:scale-110 transition-transform duration-300 text-[36px] md:text-[48px]"
+            className="cursor-pointer text-[36px] transition-transform duration-300 hover:scale-110 md:text-[48px]"
           />
         </Link>
         <Link href={links.telegram} target="_blank" rel="noopener noreferrer" aria-label="Telegram">
           <FaTelegramPlane
             aria-hidden="true"
             color="#faebd7"
-            className="cursor-pointer hover:scale-110 transition-transform duration-300 text-[32px] md:text-[44px]"
+            className="cursor-pointer text-[32px] transition-transform duration-300 hover:scale-110 md:text-[44px]"
           />
         </Link>
         <Link href={links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <FaGithub
             aria-hidden="true"
             color="#faebd7"
-            className="cursor-pointer hover:scale-110 transition-transform duration-300 text-[32px] md:text-[44px]"
+            className="cursor-pointer text-[32px] transition-transform duration-300 hover:scale-110 md:text-[44px]"
           />
         </Link>
-      </div>
+      </nav>
       <p className="text-antiqueWhite text-center">
         &copy; {new Date().getFullYear()} {t('text')}
       </p>
