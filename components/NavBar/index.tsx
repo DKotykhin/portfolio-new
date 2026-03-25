@@ -46,6 +46,7 @@ export const NavBar = ({ locale }: { locale: string }) => {
       <div className="mx-auto flex h-16 max-w-360 items-center justify-between gap-4 px-4 md:px-8">
         <Link
           href="#home"
+          className="touch-manipulation"
           onClick={e => {
             e.preventDefault();
             document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
