@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -44,7 +44,13 @@ export const NavBar = ({ locale }: { locale: string }) => {
   return (
     <div className="bg-background fixed top-0 z-50 w-full">
       <div className="mx-auto flex h-16 max-w-360 items-center justify-between gap-4 px-4 md:px-8">
-        <Link href="#home">
+        <Link
+          href="#home"
+          onClick={e => {
+            e.preventDefault();
+            document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           <Image
             src="/logo-192x192.svg"
             alt="Logo"
@@ -58,7 +64,10 @@ export const NavBar = ({ locale }: { locale: string }) => {
             <Link
               key={link.name}
               href={link.href}
-              onClick={() => document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={e => {
+                e.preventDefault();
+                document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+              }}
               aria-current={activeSection === link.id ? 'true' : undefined}
               className={`hover:text-orange transition-colors duration-300 ${
                 activeSection === link.id ? 'text-orange' : 'text-white'

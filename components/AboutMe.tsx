@@ -1,14 +1,14 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
 
 import { CiLinkedin } from 'react-icons/ci';
 import { FaGithub } from 'react-icons/fa';
 import { FiMapPin } from 'react-icons/fi';
 
-import { links, coreSkills } from '@/constants';
-import { SectionTitle } from './SectionTitle';
+import { coreSkills, links } from '@/constants';
 import { PdfModal } from './PdfModal';
+import { SectionTitle } from './SectionTitle';
 
 export const AboutMe = async () => {
   const t = await getTranslations('AboutMe');
