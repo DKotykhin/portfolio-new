@@ -1,6 +1,6 @@
 'use client';
 
-import { useTransition } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 import { ClipLoader } from 'react-spinners';
@@ -14,7 +14,7 @@ const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID || '';
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY || '';
 
 export const ContactForm = () => {
-  const [isPending, startTransition] = useTransition();
+  const [isPending, setIsPending] = useState(false);
   const t = useTranslations('Contacts');
 
   const {
@@ -26,17 +26,18 @@ export const ContactForm = () => {
     resolver: createContactResolver(t),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    startTransition(async () => {
-      try {
-        await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
-        reset();
-        toast.success(t('form.success'));
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        toast.error(t('form.error'));
-      }
-    });
+  const onSubmit = async (data: ContactFormData) => {
+    setIsPending(true);
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
+      reset();
+      toast.success(t('form.success'));
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error(t('form.error'));
+    } finally {
+      setIsPending(false);
+    }
   };
 
   return (
