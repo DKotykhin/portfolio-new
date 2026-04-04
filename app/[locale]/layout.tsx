@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import Script from 'next/script';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '../globals.css';
 
@@ -96,6 +97,7 @@ export default async function RootLayout({
           Skip to content
         </a>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
