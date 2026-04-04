@@ -3,6 +3,7 @@ import { Nunito } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import Script from 'next/script';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 import '../globals.css';
 
@@ -98,6 +99,7 @@ export default async function RootLayout({
         </a>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
