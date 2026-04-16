@@ -7,6 +7,8 @@ import * as Sentry from '@sentry/nextjs';
 Sentry.init({
   dsn: 'https://aa8531c707497c31e87cc22da0812f84@o4511231141543936.ingest.de.sentry.io/4511231191220304',
 
+  tracePropagationTargets: ['localhost', 'dmytro-kotykhin.pp.ua', /^\//],
+
   // Add optional integrations for additional features
   integrations: [Sentry.replayIntegration()],
 
